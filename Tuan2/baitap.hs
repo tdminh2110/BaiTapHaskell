@@ -17,13 +17,20 @@ f4 x y z = x == (y ++ z)
 -- Question 2
 -- Why should we define type signatures of functions? How can they help you? How can they help others?
 
-We should define type signatures of functions in order to predefine data types for input parameters and a  return value of functions. This helps the programmer to use the data type of the variable correctly while coding and helps function users to push the input parameter values and get the output value correctly.
+We should define type signatures of functions in order to predefine data types for input parameters and a  return value of functions. This helps the programmer to use the correct data type of the variable while coding and helps function users to push the input parameter values and get the output value correctly.
 
 -- Question 3
 -- Why should you define type signatures for variables? How can they help you?
+We should define type signatures for variables in order to specify the data type for variables. This helps the programmer to use the correct data type for the purpose of the problem.
+
 
 -- Question 4
 -- Are there any functions in Haskell that let you transform one type to the other? Try googling for the answer.
+
+We can convert Int to Float using the function fromIntegral.
+For example: 
+let num = 99999 :: Int
+let new_num = fromIntegral num :: Float
 
 -- Question 5
 -- Can you also define in Haskell list of lists? Did we showed any example of that? How would you access the inner
