@@ -43,6 +43,8 @@ Yes, we can define in Haskel list of lists.
 
 For example: list = [[3, 9], [7, 2], [8, 1]]
 
+We can access elements based on their indexes
+
 list !! 0 !! 1 accesses the number 9
 list !! 1 !! 0 accesses the number 7
 list !! 2 !! 1 accesses the number 1
