@@ -21,6 +21,7 @@ We should define type signatures of functions in order to predefine data types f
 
 -- Question 3
 -- Why should you define type signatures for variables? How can they help you?
+
 We should define type signatures for variables in order to specify the data type for variables. This helps the programmer to use the correct data type for the purpose of the problem.
 
 
@@ -28,10 +29,20 @@ We should define type signatures for variables in order to specify the data type
 -- Are there any functions in Haskell that let you transform one type to the other? Try googling for the answer.
 
 We can convert Int to Float using the function fromIntegral.
+
 For example: 
-let num = 99999 :: Int
-let new_num = fromIntegral num :: Float
+
+num = 99999 :: Int
+new_num = fromIntegral num :: Float
 
 -- Question 5
 -- Can you also define in Haskell list of lists? Did we showed any example of that? How would you access the inner
 -- most elements?
+
+Yes, we can define in Haskel list of lists.
+
+For example: list = [[3, 9], [7, 2], [8, 1]]
+
+list !! 0 !! 1 accesses the number 9
+list !! 1 !! 0 accesses the number 7
+list !! 2 !! 1 accesses the number 1
