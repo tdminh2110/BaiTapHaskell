@@ -19,6 +19,14 @@ checkConsumptionElectricalDevice consumption hoursOfDaily maximumMonthlyConsumpt
 -- So `show 3` will produce `"3"` and `show (3 > 2)` will produce `"True"`.
 -- In the previous function, return the excess/savings of consumption as part of the message.
 
+checkConsumptionElectricalDevice :: Int -> Int -> Int -> String
+checkConsumptionElectricalDevice consumption hoursOfDaily maximumMonthlyConsumption =
+   if maximumMonthlyConsumption < consumption * hoursOfDaily * 30
+      then "The monthly consumption of an electrical device is bigger than the maximum allowed = " ++ show (consumption * hoursOfDaily * 30 - maximumMonthlyConsumption)
+      else 
+         if maximumMonthlyConsumption == consumption * hoursOfDaily * 30
+            then "The monthly consumption of an electrical device is equal to the maximum allowed."
+            else "The monthly consumption of an electrical device is smaller than the maximum allowed = "  ++ show (maximumMonthlyConsumption - consumption * hoursOfDaily * 30)
 
 -- Question 3
 -- Write a function that showcases the advantages of using let expressions to split a big expression into smaller ones.
