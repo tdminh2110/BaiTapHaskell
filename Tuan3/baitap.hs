@@ -32,3 +32,16 @@ splitExpression a b c d =
       exp3 = c - d
    in  
       exp1 a + exp2 a b + exp3 
+
+-- Question 4
+-- Write a function that takes in two numbers and returns their quotient such that it is not greater than 1.
+-- Return the number as a string, and in case the divisor is 0, return a message why the division is not
+-- possible. To implement this function using both guards and if-then-else statements.
+
+myDivision :: Double -> Double -> [Char]
+myDivision a b
+   | a == 0 || b == 0 = "Division cannot be performed when denominator = 0"
+   | otherwise = 
+      if a > b
+         then show (a / b)
+         else show (b / a)
