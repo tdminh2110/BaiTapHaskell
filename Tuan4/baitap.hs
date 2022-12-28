@@ -23,3 +23,9 @@ myFunction2_2 mylist = case mylist of
     [] -> []
     [a] -> [a]
     (a:b:rest) -> [a, b]
+
+-- Question 3
+-- Create a function that takes a 3-element tuple (all of type Integer) and adds them together
+
+myFunction3 :: (Integer, Integer, Integer) -> Integer
+myFunction3 (a, b, c) = a + b + c
