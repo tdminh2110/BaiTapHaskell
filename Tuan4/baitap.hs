@@ -29,3 +29,11 @@ myFunction2_2 mylist = case mylist of
 
 myFunction3 :: (Integer, Integer, Integer) -> Integer
 myFunction3 (a, b, c) = a + b + c
+
+-- Question 4
+-- Implement a function that returns True if a list is empty and False otherwise.
+
+myFunction4 :: [Int] -> Bool
+myFunction4 [] = True
+myFunction4 otherwise = False
+
