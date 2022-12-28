@@ -45,3 +45,11 @@ myFunction5 :: [Int] -> [Int]
 myFunction5 [] = []
 myFunction5 (a:rest) = rest
 
+-- Question 6
+-- write a case expression wrapped in a function that takes an Int and adds one if it's even. Otherwise does nothing. 
+-- (Use the `even` function to check if the number is even.)
+
+myFunction6 :: Int -> Int
+myFunction6 number = case even number of
+    True -> number + 1
+    False -> number
