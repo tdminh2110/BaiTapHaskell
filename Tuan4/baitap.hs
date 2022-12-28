@@ -37,3 +37,11 @@ myFunction4 :: [Int] -> Bool
 myFunction4 [] = True
 myFunction4 otherwise = False
 
+-- Question 5
+-- Write the implementation of the tail function using pattern matching. But, instead of failing if
+-- the list is empty, return an empty list.
+
+myFunction5 :: [Int] -> [Int]
+myFunction5 [] = []
+myFunction5 (a:rest) = rest
+
