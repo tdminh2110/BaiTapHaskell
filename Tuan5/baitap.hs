@@ -25,3 +25,34 @@ curry' f x y = f (x,y)
 
 main = do
     print(curry' fst 2 1)
+
+-- Use higher-order functions, partial application, and point-free style to create a function that checks if a word has an uppercase letter.
+-- Start with using just higher-order functions and build from there.
+
+checkUppercaseFirstCharacter :: String -> Bool
+checkUppercaseFirstCharacter myString = any (\x -> elem x ['A' .. 'Z']) myString
+
+main = do
+    print(checkUppercaseFirstCharacter "Hello")
+
+-- Create the `count` function that takes a team ("Red", "Blue", or "Green") and returns the amount of votes the team has inside `votes`.
+
+votes :: [String]
+votes = ["Red", "Blue", "Green", "Blue", "Blue", "Red"]
+
+count :: String -> Int
+count color = length $ filter (== color) votes
+
+main = do
+    print(count "Blue")
+
+-- Create a one-line function that filters `cars` by brand and then checks if there are any left.
+
+cars :: [(String,Int)]
+cars = [("Toyota",0), ("Nissan",3), ("Ford",1)]
+
+checkCar :: String -> Bool
+checkCar label = any (\(x, y) -> x == label && y > 0) cars
+
+main = do
+    print(checkCar "Toyota")
