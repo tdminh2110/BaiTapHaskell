@@ -16,3 +16,12 @@ uncurry' f (x,y) = f x y
 
 main = do
     print(uncurry' (+) (1,2))
+
+-- Create the `curry'` function that converts an uncurried function to a curried function. So this: `fst (1,2)` that returns `1` can be written as
+-- `curry' fst 1 2` (with the tuple converted into two different arguments).
+
+curry' :: ((a,a) -> a) -> a -> a -> a
+curry' f x y = f (x,y)
+
+main = do
+    print(curry' fst 2 1)
